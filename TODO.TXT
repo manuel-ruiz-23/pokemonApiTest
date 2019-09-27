@@ -1,0 +1,2 @@
+-add Routing - done
+-create the pokemoninfo View - done
