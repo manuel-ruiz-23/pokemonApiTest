@@ -1,5 +1,5 @@
 import React from 'react';
-import Sprite from '../Common/Sprite';
+import Sprite from './Sprite';
 
 import styles from './PokemonInfoView.module.css';
 
@@ -10,13 +10,13 @@ const PokemonInfoView = ({ pokemon }) => {
         <div className={styles.infoContainer}>
             <BasicInfo pokemon={pokemon} />
             <Abilities abilities={pokemon.abilities} /> 
-            <Gallerie sprites={pokemon.sprites} />
+            <Galerie sprites={pokemon.sprites} />
         </div>
     )
 };
 
-const Gallerie = ({sprites}) => (
-    <div className={styles.gallerie}>
+const Galerie = ({sprites}) => (
+    <div className={styles.galerie}>
         <Sprite url={sprites.front_default} label="Front default" />
         <Sprite url={sprites.back_default} label="Back default" />
     </div>

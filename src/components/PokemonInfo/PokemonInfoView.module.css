@@ -12,7 +12,7 @@
 /* there is a bug here, i want to put the gallerie from column o to 2 but i get
 *   invalid property value...
 */
-.gallerie{
+.galerie{
     /* grid-column: 0 / 2; */
     /* grid-row: 1 / 2; */
     display: flex;
