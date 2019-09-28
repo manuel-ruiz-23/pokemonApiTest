@@ -6,10 +6,13 @@ import PokemonList from './components/PokemonList';
 import PokemonInfo from './components/PokemonInfo';
 
 const  App = () => (  
-  <Router>
-    <Route path="/" exact component={PokemonList} />
-    <Route path="/:name" component={PokemonInfo} />
-  </Router> 
+  <div className="pokedex">
+    <Router>
+      <Route path="/" exact component={PokemonList} />
+      <Route path="/:name" component={PokemonInfo} />
+    </Router> 
+  </div>
+  
 );
 
 export default App;

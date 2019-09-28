@@ -1,5 +1,5 @@
-import React from 'react';
-
+import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import PokemonInfoView from './PokemonInfoView';
 
 import usePokemon from './usePokemon';
@@ -9,9 +9,13 @@ const PokemonInfo = ({match}) => {
 
     const pokemon = usePokemon(match.url)
 
+    //here i could do a better loading screen...
     if(pokemon){
         return(
-            <PokemonInfoView pokemon={pokemon}/>
+            <Fragment>
+                <PokemonInfoView pokemon={pokemon}/>
+                <BackButton />
+            </Fragment>
         )
     }else{
         return(
@@ -22,4 +26,12 @@ const PokemonInfo = ({match}) => {
     }
 };
 
+const BackButton = () => (
+    <Link to="/">
+        <button>
+            Back
+        </button>
+    </Link>
+    
+)
 export { PokemonInfo };
