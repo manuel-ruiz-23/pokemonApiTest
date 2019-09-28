@@ -37,8 +37,8 @@ const Abilities = ({abilities}) => {
         <div className={styles.abilities}>
             <h2>Abilities</h2>
             <ul>
-                {abilities.map((ability) => (
-                    <li>{ability.ability.name}</li>
+                {abilities.map((ability, index) => (
+                    <li key={index}>{ability.ability.name}</li>
                 ))}
             </ul>
         </div>

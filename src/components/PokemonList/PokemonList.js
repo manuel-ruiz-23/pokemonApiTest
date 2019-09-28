@@ -1,36 +1,19 @@
-import React, { useState, useEffect, Fragment} from 'react';
+import React, { Fragment } from 'react';
 import { Link } from "react-router-dom";
+
+import NavigationBar from './NavigationBar';
+import usePokemonList from './usePokemonList';
 
 import styles from './PokemonList.module.css';
 
-const usePokemonList = () => {
-    const [pokemons, setPokemons] = useState([])
-
-    useEffect(() => {
-        async function fetchData() {
-            const response = await fetch('https://pokeapi.co/api/v2/pokemon/')
-                .then(response => {
-                    return response.json();
-                });
-
-
-            // console.log('hola',response);
-            setPokemons(response.results);
-        }  
-        
-        fetchData();
-    },[]);
-
-    return pokemons;
-}
-
 
 const  PokemonList = () => {
-    const pokemons = usePokemonList();
+    const [pokemons, navigation] = usePokemonList();
 
     return(
         <Fragment>
             <PokemonListView pokemons={pokemons}/>
+            <NavigationBar navigation={navigation} />
         </Fragment>
         
     );
@@ -38,6 +21,7 @@ const  PokemonList = () => {
 
 const PokemonListView = ({ pokemons }) => (
     <div className={styles.listContainer}>
+        <h1>Pokemon Index</h1>
         <ul>
             {pokemons.map((pokemon, index) => (
                 <Link key={index} to={`/${pokemon.name}`}>
@@ -47,9 +31,5 @@ const PokemonListView = ({ pokemons }) => (
         </ul>
     </div>
 );
-
-
-
-
 
 export { PokemonList };

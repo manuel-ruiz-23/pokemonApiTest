@@ -1,7 +1,7 @@
 .listContainer{
     padding: 16px;
     background-Color: #F5F5F5;
-    height: 750px;
+    height: 800px;
     width: 500px;
     display: flex;
     flex-flow: column;
@@ -27,8 +27,10 @@
 }
 
 /* Navigation Container */
-.navigationContainer{
-    padding: 32px;
+.navigationBarContainer{
+    width: 500px;
+    padding: 16px;
+    margin: 0;
     display: flex;
     justify-content: space-around
 }
