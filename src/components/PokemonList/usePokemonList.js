@@ -28,7 +28,7 @@ const usePokemonList = () => {
         fetchData();
     },[offset]);
 
-    return [pokemons, navigation];
+    return [{ pokemons, offset}, navigation];
 };
 
 export default usePokemonList;
