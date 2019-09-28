@@ -1,2 +1,20 @@
--add Routing - done
--create the pokemoninfo View - done
+/*
+* GOALS
+*
+*-  Remove use-data-api 
+*-  Use async await 
+*-  use Pure Hooks + context api
+*-  Dynamic Routing
+*-  Make It Pretty
+*
+*/
+create client servvices provider
+good Looking code
+create a small components
+
+
+1. Clean the mess
+2. create project structure
+3. make it Pretty
+4. make it work
+5. meet the goals
