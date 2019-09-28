@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import PokemonInfoView from './PokemonInfoView';
 
+import Button from '../Common/Button';
+
 import usePokemon from './usePokemon';
 
 //the context provider should live here
@@ -28,10 +30,7 @@ const PokemonInfo = ({match}) => {
 
 const BackButton = () => (
     <Link to="/">
-        <button>
-            Back
-        </button>
+        <Button label="Back"/>
     </Link>
-    
-)
+);
 export { PokemonInfo };

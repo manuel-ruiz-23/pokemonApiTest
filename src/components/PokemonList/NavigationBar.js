@@ -1,24 +1,17 @@
-import React from 'react'
+import React from 'react';
 
+import Button from '../Common/Button';
 import styles from './PokemonList.module.css';
 
 const NavigationBar = ({navigation}) => (
     <div className={styles.navigationBarContainer}>
         <div>
-            <button onClick={navigation.firstPage}>
-                first page
-            </button>
-            <button onClick={navigation.prevPage}>
-                prev page 
-            </button>
+            <Button label="first" handleClick={navigation.firstPage} />
+            <Button label="prev" handleClick={navigation.prevPage} />
         </div>
         <div>
-            <button onClick={navigation.nextPage}>
-                next page
-            </button>
-            <button onClick={navigation.lastPage}>
-                last page
-            </button>
+            <Button label="next" handleClick={navigation.nextPage} />
+            <Button label="last" handleClick={navigation.lastPage} />
         </div>
     </div>
 );
