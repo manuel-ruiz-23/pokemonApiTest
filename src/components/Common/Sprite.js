@@ -1,3 +1,6 @@
+/*
+this is in a commons forlder because i intent to use it in PokemonList and PokemonInfo 
+*/
 import React from 'react';
 
 import styles from './Sprite.module.css';

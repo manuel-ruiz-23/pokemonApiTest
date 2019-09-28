@@ -1,78 +1,25 @@
 import React from 'react';
 
+import PokemonInfoView from './PokemonInfoView';
 
-//TODO Add more pokemon properties and the sprites
+import usePokemon from './usePokemon';
 
-const PokemonInfo = () => {
+//the context provider should live here
+const PokemonInfo = ({match}) => {
 
-    //TODO figure out how to use dynamic routing to fecth the data here
+    const pokemon = usePokemon(match.url)
 
-    const pokemon = {
-        name: 'ditto',
-        height: '3',
-        weight: '40'
-    };
-
-    return(
-        <PokemonInfoView 
-            name={pokemon.name}
-            height={pokemon.height}
-            weight={pokemon.weight}
-        />
-    )
+    if(pokemon){
+        return(
+            <PokemonInfoView pokemon={pokemon}/>
+        )
+    }else{
+        return(
+            <div>
+                Cargando...
+            </div>
+        )
+    }
 };
 
-const PokemonInfoView = ({ name, height, weight }) => (
-    <div>
-        <p>name: {name}</p>
-        <p>height: {height}</p>
-        <p>weight: {weight}</p>
-    </div>
-);
-
-
 export { PokemonInfo };
-
-
-
-/* 
-
-Beast Museum 
-
-*/
-
-// const  PokemonList = ({location}) => {
-//     console.log('location', location)
-//     const [{ data, isLoading, isError }, doFetch] = useDataApi(
-//         location.state.url,
-//         // `https://pokeapi.co/api/v2/pokemon/${pokemonId}`,
-//         null,
-//       );
-
-//     console.log('data', data);
-
-//     return(
-//         <div>
-//             {data && (
-//                 <Pokemon abilities={data.abilities} experience={data.base_experience} name={data.forms[0].name}/>
-//             )}
-//         </div>
-//     );
-// };
-
-// const Pokemon = ({ abilities, experience, name }) => (
-//     <div>
-//         <p>
-//             mane: {name}
-//         </p>
-//         <p>
-//             xp: {experience}
-//         </p>
-//         <div>
-//             {abilities.map((ability, index) => (
-//                 <p key={index}> ability {index+1}: {ability.ability.name}</p>
-//             ))}
-//         </div>
-//     </div>
-// )
-// export default PokemonList;
