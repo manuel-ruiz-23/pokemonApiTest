@@ -10,7 +10,9 @@ const style = {
     margin: '8px',
     padding: '4px',
     outline: 'none',
-    borderRadius: '8px'
+    border: 'none',
+    backgroundColor: '#00000000',
+    borderBottom: '2px solid black'
 }
 
 export default Button;

@@ -1,13 +1,10 @@
 .listContainer{
     display: flex;
     flex-flow: column;
-    justify-content: center;
     align-items: center;
     padding: 16px;
-    background-Color: #F5F5F5;
     height: 800px;
-    width: 500px;
-    border-radius: 4px;
+    
 }
 
 .listContainer p{
@@ -35,7 +32,6 @@
 
 /* Navigation Container */
 .navigationBarContainer{
-    width: 500px;
     padding: 16px;
     margin: 0;
     display: flex;

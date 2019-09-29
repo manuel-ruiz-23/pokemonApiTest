@@ -1,18 +1,12 @@
 /*
 * GOALS
 *
-*-  Remove use-data-api 
-*-  Use async await 
 *-  use Pure Hooks + context api
 *-  Dynamic Routing
 *-  Make It Pretty
 *
 */
-create client servvices provider
-good Looking code
-create a small components
 
 TODO:
 -fix grid bug
--implement pagination (done)
--use context api
+

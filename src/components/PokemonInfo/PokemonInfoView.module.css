@@ -1,12 +1,7 @@
 .infoContainer{
     display: grid;
     grid-template-columns: auto auto;
-    /* grid-template-rows: auto auto; */
-
     padding: 16px;
-    background-Color: #F5F5F5;
-    width: 500px;
-    border-radius: 4px;
 }
 
 /* there is a bug here, i want to put the gallerie from column o to 2 but i get
