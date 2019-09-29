@@ -6,13 +6,8 @@ const usePokemon = (url) => {
     useEffect(() => {
         async function fetchData() {
             const response = await fetch(`https://pokeapi.co/api/v2/pokemon${url}`)
-                .then(response => {
-                    return response.json();
-                });
-
-
-            console.log('hola',response);
-            setPokemon(response);
+            const data = await response.json();
+            setPokemon(data);
         }  
         
         fetchData();
