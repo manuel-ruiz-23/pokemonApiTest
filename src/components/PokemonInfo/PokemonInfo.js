@@ -1,12 +1,14 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import PokemonInfoView from './PokemonInfoView';
 
 import Button from '../Common/Button';
+import PokemonInfoView from './PokemonInfoView';
 
 import usePokemon from './usePokemon';
 
-//the context provider should live here
+import { PokemonProvider } from './PokemonContext';
+
+
 const PokemonInfo = ({match}) => {
 
     const pokemon = usePokemon(match.url)
@@ -15,7 +17,10 @@ const PokemonInfo = ({match}) => {
     if(pokemon){
         return(
             <Fragment>
-                <PokemonInfoView pokemon={pokemon}/>
+                <PokemonProvider pokemon={pokemon}>
+                    <PokemonInfoView pokemon={pokemon}/>
+                </PokemonProvider>
+                
                 <BackButton />
             </Fragment>
         )
